@@ -107,7 +107,28 @@ The body of the request is the created child.
 
 ## Updating a child
 
-TODO
+```
+$ curl -i -X PUT -H "X-Auth-Token: $TOKEN" -H "Content-Type: application/json" -d '{"id": "d0dae4a2-9f1e-11e5-97b7-cfe975e88820", "firstName": "Nieuwe", "lastName": "Naam", "birthDate": "2001-09-26", "tenantCanonicalName": "despeelberg"}'  http://localhost:9000/api/v0/child
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+X-Auth-Token: SOME_NEW_TOKEN
+Date: Thu, 10 Dec 2015 09:33:03 GMT
+Content-Length: 145
+
+{"id":"d0dae4a2-9f1e-11e5-97b7-cfe975e88820","firstName":"Nieuwe","lastName":"Naam","birthDate":"2001-09-26","tenantCanonicalName":"despeelberg"}
+```
+
+### Request
+
+Send a PUT request to `/api/v0/child`. The `Content-Type` of your request should be `application/json`. The body of your request should be JSON, in the format specified above. The `id` is required.
+
+### Response
+
+#### On a successful update
+
+Status code: 200
+
+The body of the request is the updated child.
 
 ## Deleting a child
 
