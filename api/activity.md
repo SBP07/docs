@@ -83,7 +83,7 @@ The body has the following structure:
 
 Where each object is an activity. The JSON structure for an activity is described above.
 
-## Creating a new child
+## Creating a new activity
 
 ```
 $ curl -i -X POST -H "X-Auth-Token: $TOKEN" -H "Content-Type: application/json" -d '{"activityTypeId": "0c5ac2be-aa59-11e5-81ea-e75c58858255", "tenantCanonicalName": "platform", "date": "2015-12-25", "place": "speelplein", "startTime": "2015-12-24T16:16:46.526Z", "endTime": "2015-12-24T19:16:46.526Z"}'  http://localhost:9000/api/v0/activity
@@ -108,7 +108,7 @@ The body of your request should be JSON, with the structure specified above. The
 
 Response code: 201
 
-The body of the request is the created child.
+The body of the request is the created activity.
 
 ## Updating an activity
 
